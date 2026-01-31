@@ -19,8 +19,8 @@ public class EnemyHealth : MonoBehaviour
         {
             if (enemyMeleeAttacker.IsAttacking)
             {
-                // take damage
-            }
+                GameManager.Instance.OnPlayerDamaged();
+            } 
         }
         
         TakeMaskDamage(1);
