@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1187017324456650322}
   - component: {fileID: 3508108337314056611}
   - component: {fileID: 8511560488632700940}
+  - component: {fileID: -2744404419457903790}
   - component: {fileID: -5048452339986777118}
   m_Layer: 0
   m_Name: Enemy
@@ -128,6 +129,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlacedObject
   _placedObjectType: 1
   _currentGridCell: {fileID: 0}
+--- !u!114 &-2744404419457903790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4066563796154169858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab947d92880d2a34eb2a66955f34ccb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnAnimation
+  _moveEndValueY: 0.5
+  _particleSpawnOffsetY: 0.4
+  _enemyMovement: {fileID: -5048452339986777118}
 --- !u!114 &-5048452339986777118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8831a3dfc72e0614882cc0faecdfa2a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMover
+  _placedObject: {fileID: 8511560488632700940}
   _moveDirection: {x: 0, y: 0, z: 1}
   _currentGridCell: {fileID: 0}
   _distanceTime: 0

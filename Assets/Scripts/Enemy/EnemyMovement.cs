@@ -15,19 +15,19 @@ public class EnemyMovement : MonoBehaviour
         _placedObject = GetComponent<PlacedObject>();
     }
 
-    private void Start()
-    {
-        _currentGridCell = _placedObject.CurrentGridCell;
-        
-        UpdatePoints();
-        SetPosition();
-    }
-
     private void Update()
     {
         if (_currentGridCell == null) return;
         
         Move();
+    }
+
+    public void StartMove()
+    {
+        _currentGridCell = _placedObject.CurrentGridCell;
+        
+        UpdatePoints();
+        SetPosition();
     }
 
     private void Move()
