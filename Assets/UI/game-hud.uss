@@ -1,0 +1,104 @@
+/* ===========================================
+   ROOT & LAYOUT
+   =========================================== */
+
+.root {
+    /* Cover full screen */
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.top-bar {
+    /* Horizontal layout */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.spacer {
+    /* Pushes elements apart (like flex-grow in CSS) */
+    flex-grow: 1;
+}
+
+/* ===========================================
+   HEARTS (Left Side)
+   =========================================== */
+
+.hearts-container {
+    flex-direction: row;
+    /* Gap between hearts */
+    padding: 10px;
+}
+
+.heart {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    
+    /* Background image will be set based on state */
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+/* Filled heart state */
+.heart-filled {
+    /* Replace with your actual texture path */
+    background-image: url("project://database/Assets/UI/heart-filled.png");
+}
+
+/* Empty heart state */
+.heart-empty {
+    /* Replace with your actual texture path */
+    background-image: url("project://database/Assets/UI//heart-empty.png");
+}
+
+/* ===========================================
+   PROGRESS BAR (Right Side)
+   =========================================== */
+
+.progress-container {
+    width: 80px;
+    height: 320px;
+    position: relative;
+}
+
+.progress-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.progress-fill {
+    position: absolute;
+    left: 22%;
+    right: 22%;
+    bottom: 8%;
+    width: 24%;
+    height: 0%;
+    background-color:  #c9ffe4;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    opacity: 0.9;
+}
+
+.progress-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("project://database/Assets/UI/Textures/SoulCollectorVertical.png");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+/* ===========================================
+   OPTIONAL: Animations / Hover States
+   =========================================== */
+
+/* Heart pulse effect on damage (add/remove via code) */
+.heart-damaged {
+    scale: 1.2 1.2;
+    transition-property: scale;
+    transition-duration: 0.1s;
+}
