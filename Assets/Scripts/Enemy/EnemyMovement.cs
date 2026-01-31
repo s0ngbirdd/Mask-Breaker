@@ -43,7 +43,14 @@ public class EnemyMovement : MonoBehaviour
             // UPDATE CURRENTGRIDCELL VALUES
             _currentGridCell = _currentGridCell.GetNeighbourByDirection(_moveDirection);
             
-            if (_currentGridCell == null) return;
+            if (_currentGridCell == null)
+            {
+                Destroy(this.gameObject);
+                GameManager.Instance.globalEventBus.triggerEvent("EnemyReachedEnd");
+                Debug.Log("Enemy reached the end and is destroyed.");
+                return;
+            }
+            ;
                 
             UpdatePoints();
         }

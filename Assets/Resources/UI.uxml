@@ -1,0 +1,4 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/game-progress.uss?fileID=7433441132597879392&amp;guid=a170e636b387c412c8a5e2403d5c98f5&amp;type=3#game-progress"/>
+    <ui:ProgressBar value="1" title="" class="game-progress" style="rotate: -90deg; transform-origin: center; translate: 0 200px; transition-duration: 0.5s; transition-timing-function: ease-in-out; background-size: 100% 100%; width: 100px; align-items: stretch; align-content: flex-start; align-self: flex-end; height: 10px;"/>
+</ui:UXML>

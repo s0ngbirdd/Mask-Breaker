@@ -1,0 +1,25 @@
+
+
+
+
+
+.unity-progress-bar {
+    height: 10px;
+    margin: 10px;
+}
+
+/* Style the background of the progress bar */
+.unity-progress-bar__background {
+    transform: rotate(90deg);
+    background-color: #333; /* Dark grey background */
+    border-radius: 5px;
+}
+
+/* Style the progress fill bar */
+.unity-progress-bar__progress {
+    background-color: #4CAF50; /* Green fill color */
+    border-radius: 5px;
+    /* Transition effect for smooth filling */
+    transition-property: width;
+    transition-duration: 0.5s;
+}
