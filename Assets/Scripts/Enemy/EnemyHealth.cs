@@ -5,6 +5,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private int _maskHealth = 3;
     [SerializeField] private EmissionFlicker _emissionFlicker;
     [SerializeField] private HitScale _hitScale;
+    [SerializeField] private EnemyAttacker _enemyAttacker;
 
     private void OnValidate()
     {
@@ -14,6 +15,14 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        if (_enemyAttacker is EnemyMeleeAttacker enemyMeleeAttacker)
+        {
+            if (enemyMeleeAttacker.IsAttacking)
+            {
+                // take damage
+            }
+        }
+        
         TakeMaskDamage(1);
     }
 

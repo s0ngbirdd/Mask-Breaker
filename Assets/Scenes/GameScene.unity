@@ -1424,9 +1424,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9877f91a12360cb4db597b1bc1f54305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
-  totalEnemiesToSpawn: 100
-  enemiesSpawned: 0
-  _placedObjectPrefab: {fileID: 8511560488632700940, guid: c2fae7854e7bd834281f771587c04fd3, type: 3}
+  totalSouls: 10
+  soulsSpawned: 0
+  _placedObjectPrefab: {fileID: 8511560488632700940, guid: b5c5c5612d55f284b994f22775e5de44, type: 3}
   _spawnPoints:
   - {fileID: 1680463580}
   - {fileID: 1626244340}
@@ -2523,6 +2523,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1451872722}
+  - component: {fileID: 1451872724}
+  - component: {fileID: 1451872723}
   m_Layer: 0
   m_Name: Setup
   m_TagString: Untagged
@@ -2548,6 +2550,35 @@ Transform:
   - {fileID: 832575519}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1451872723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451872721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25777ec906564962b8ca6cb323048aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GlobalEventBus
+--- !u!114 &1451872724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451872721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb4c8d6322724971b5d1b383e287773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  uiDocument: {fileID: 0}
+  enemySpawner: {fileID: 565850959}
+  globalEventBus: {fileID: 1451872723}
+  soulsSaved: 0
+  health: 3
 --- !u!1001 &1514053380
 PrefabInstance:
   m_ObjectHideFlags: 0

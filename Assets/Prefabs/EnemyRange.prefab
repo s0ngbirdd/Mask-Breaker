@@ -18,9 +18,9 @@ GameObject:
   - component: {fileID: 4659016329848142874}
   - component: {fileID: 8955952858203704926}
   - component: {fileID: -3442007829841403676}
-  - component: {fileID: 2914802235174273398}
+  - component: {fileID: 8872332182556999460}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemyRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ae664d0a7083544bbe58c4c03d66e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitScale
---- !u!114 &2914802235174273398
+--- !u!114 &8872332182556999460
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,8 +216,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4066563796154169858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ccdc52e0206e704c9f400995c2367dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d8eb8cf916a50144abb3698448a1605, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyMeleeAttacker
-  _emissionFlicker: {fileID: 8955952858203704926}
-  _isAttacking: 0
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyRangeAttacker
+  _projectilePrefab: {fileID: 8339985745692070415, guid: 52003ef864b51dd4193609414e69b252, type: 3}

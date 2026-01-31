@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TextureScroll : MonoBehaviour
 {
-    public Vector2 scrollSpeed = new Vector2(0.5f, 0f);
+    public Vector2 scrollSpeed = new Vector2(0, 0.1f);
     private Material material;
 
     void Awake()
