@@ -12,9 +12,9 @@ public enum GameState
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    [SerializeField] private UIDocument uiDocument;
     [SerializeField] private EnemySpawner enemySpawner;
     [SerializeField] private GameHUDController _gameHUDController;
+    [SerializeField] private GameEndUIController _gameEndUIController;
 
     public GlobalEventBus globalEventBus;
     GameState currentGameState = GameState.Playing;
@@ -68,9 +68,11 @@ public class GameManager : MonoBehaviour
         if(currentGameState == GameState.Won)
         {
             Debug.Log("Game Won!");
+            _gameEndUIController.setGameEndUIState(GameEndUIController.State.Won);
         } else if(currentGameState == GameState.GameOver)
         {
             Debug.Log("Game Over!");
+            _gameEndUIController.setGameEndUIState(GameEndUIController.State.GameOver);
         }
     }
 

@@ -1,0 +1,19 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/game-end.uss?fileID=7433441132597879392&amp;guid=263f3c721fbde44bcac961154044ab70&amp;type=3#game-end"/>
+    <ui:VisualElement name="root" class="root">
+        <ui:VisualElement name="game-over-screen" class="game-end-container hidden">
+            <ui:Label name="game-end-title" text="Game Over" class="game-end-title"/>
+            <ui:Label name="game-end-subtitle" text="Thanks for playing!" class="game-end-subtitle"/>
+            <ui:Button name="restart-button" class="play-again-button">
+                <ui:Label text="Restart Game"/>
+            </ui:Button>
+        </ui:VisualElement>
+        <ui:VisualElement name="game-won-screen" class="game-end-container hidden">
+            <ui:Label name="game-won-title" text="You Win!" class="game-end-title"/>
+            <ui:Label name="game-won-subtitle" text="Congratulations!" class="game-end-subtitle"/>
+            <ui:Button name="next-level-button" class="play-again-button">
+                <ui:Label text="Play again"/>
+            </ui:Button>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

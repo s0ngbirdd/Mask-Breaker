@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/game-hud.uss?fileID=7433441132597879392&amp;guid=f05c80f7eaab942e4a339c6e7cbf4485&amp;type=3#game-hud"/>
+    <Style src="project://database/Assets/UI/game-hud.uss?fileID=7433441132597879392&amp;guid=f05c80f7eaab942e4a339c6e7cbf4485&amp;type=3#game-hud"/>
     <ui:VisualElement name="root" class="root">
         <ui:VisualElement name="top-bar" class="top-bar">
             <ui:VisualElement name="hearts-container" class="hearts-container">
@@ -8,9 +8,9 @@
                 <ui:VisualElement name="heart-3" class="heart heart-filled"/>
             </ui:VisualElement>
             <ui:VisualElement name="spacer" class="spacer"/>
-            <ui:VisualElement name="progress-container" class="progress-container">
-                <ui:VisualElement name="progress-background" class="progress-background"/>
-                <ui:VisualElement name="progress-fill" class="progress-fill" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; transform-origin: center; translate: 21px -10px;"/>
+            <ui:VisualElement name="progress-container" class="progress-container" style="height: 320px;">
+                <ui:VisualElement name="progress-background" class="progress-background" style="height: 100%;"/>
+                <ui:VisualElement name="progress-fill" class="progress-fill" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; transform-origin: center; translate: 21px -10px; height: 8%;"/>
                 <ui:VisualElement name="progress-overlay" picking-mode="Ignore" class="progress-overlay" style="background-image: url(&quot;project://database/Assets/UI/SoulCollectorVertical.png?fileID=2800000&amp;guid=3c0bbf3e5b039434f9bf2a98c24b0c97&amp;type=3#SoulCollectorVertical&quot;);"/>
             </ui:VisualElement>
         </ui:VisualElement>

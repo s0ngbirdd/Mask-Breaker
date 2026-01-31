@@ -216,6 +216,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6195492130757278537, guid: 891c99507b0bbab44b6765a7288ee6f0, type: 3}
   m_PrefabInstance: {fileID: 3468687}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &63710938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 63710940}
+  - component: {fileID: 63710939}
+  m_Layer: 5
+  m_Name: GameEndUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &63710939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63710938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 11400000, guid: 25fc779ff07434e619a2c6d2b4593a0e, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 06f71fbd7762c4b509ab5602ddc89e69, type: 3}
+  m_SortingOrder: 0
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
+--- !u!4 &63710940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63710938}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &132728453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,7 +1479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9877f91a12360cb4db597b1bc1f54305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
-  totalSouls: 10
+  totalSouls: 3
   soulsSpawned: 0
   _placedObjectPrefab: {fileID: 8511560488632700940, guid: c2fae7854e7bd834281f771587c04fd3, type: 3}
   _spawnPoints:
@@ -2133,6 +2188,61 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1036437688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1036437690}
+  - component: {fileID: 1036437689}
+  m_Layer: 5
+  m_Name: GameHUD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1036437689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036437688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 11400000, guid: 25fc779ff07434e619a2c6d2b4593a0e, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 859225289900f4929a59f3eb27546c59, type: 3}
+  m_SortingOrder: 0
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
+--- !u!4 &1036437690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036437688}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1073549247
 GameObject:
   m_ObjectHideFlags: 0
@@ -2525,6 +2635,8 @@ GameObject:
   - component: {fileID: 1451872722}
   - component: {fileID: 1451872724}
   - component: {fileID: 1451872723}
+  - component: {fileID: 1451872726}
+  - component: {fileID: 1451872725}
   m_Layer: 0
   m_Name: Setup
   m_TagString: Untagged
@@ -2574,11 +2686,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb4c8d6322724971b5d1b383e287773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  uiDocument: {fileID: 0}
   enemySpawner: {fileID: 565850959}
+  _gameHUDController: {fileID: 1451872726}
+  _gameEndUIController: {fileID: 1451872725}
   globalEventBus: {fileID: 1451872723}
   soulsSaved: 0
   health: 3
+--- !u!114 &1451872725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451872721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 420ba3d7662c044cd92817adcfde7377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEndUIController
+  uiDocument: {fileID: 63710939}
+--- !u!114 &1451872726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451872721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff18b9458c96941b7895de9239f0c9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameHUDController
+  uiDocument: {fileID: 1036437689}
+  heartFilledTexture: {fileID: 2800000, guid: 833e4086d989c4ba4a005e1eeb4a0e23, type: 3}
+  heartEmptyTexture: {fileID: 2800000, guid: 40e39706df75b46e098bfff043df410d, type: 3}
+  maxHearts: 3
 --- !u!1001 &1514053380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3503,3 +3645,5 @@ SceneRoots:
   - {fileID: 565850958}
   - {fileID: 1090877275}
   - {fileID: 132728454}
+  - {fileID: 1036437690}
+  - {fileID: 63710940}

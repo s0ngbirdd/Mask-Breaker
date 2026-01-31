@@ -1,0 +1,38 @@
+.game-end-container {
+    width: 50%;
+    align-self: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.game-end-title {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.game-end-subtitle {
+    font-size: 24px;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.play-again-button {
+    padding: 15px 30px;
+    font-size: 20px;
+    color: black;
+    background-color: #c9ffe4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.hidden {
+    display: none;
+}
