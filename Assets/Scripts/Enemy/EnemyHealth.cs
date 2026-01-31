@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField] private int _health = 3;
+    [SerializeField] private int _maskHealth = 3;
     [SerializeField] private EmissionFlicker _emissionFlicker;
     [SerializeField] private HitScale _hitScale;
 
@@ -14,17 +14,17 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        TakeDamage(1);
+        TakeMaskDamage(1);
     }
 
-    private void TakeDamage(int damage)
+    private void TakeMaskDamage(int damage)
     {
         _emissionFlicker.Flick(Color.white, 0.15f, 50);
         _hitScale.Animate();
         ParticleSpawner.Instance.InstantiateHitParticle(transform.position);
         
-        _health -= damage;
-        if (_health <= 0)
+        _maskHealth -= damage;
+        if (_maskhealth <= 0)
             Destroy(gameObject);
     }
 }
