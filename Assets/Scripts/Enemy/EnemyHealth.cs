@@ -3,30 +3,28 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int _health = 3;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private EmissionFlicker _emissionFlicker;
+    [SerializeField] private HitScale _hitScale;
+
+    private void OnValidate()
     {
-        rend = GetComponent<Renderer>();
+        _emissionFlicker = GetComponent<EmissionFlicker>();
+        _hitScale = GetComponent<HitScale>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnMouseEnter()
     {
+        TakeDamage(1);
+    }
+
+    private void TakeDamage(int damage)
+    {
+        _emissionFlicker.Flick(Color.white, 0.15f, 50);
+        _hitScale.Animate();
+        ParticleSpawner.Instance.InstantiateHitParticle(transform.position);
         
-    }
-
-    void OnMouseEnter()
-    {
-        Debug.Log("Mouse Entered Enemy");
-        takeDamage(1);
-    }
-
-    void takeDamage(int damage)
-    {
         _health -= damage;
         if (_health <= 0)
-        {
             Destroy(gameObject);
-        }
     }
 }

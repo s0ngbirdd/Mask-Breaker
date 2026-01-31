@@ -26,7 +26,7 @@ public class ParticleSpawner : MonoBehaviour
         Instantiate(_smokeParticle, position, _smokeParticle.transform.rotation);
     }
 
-    public void InstantiateHitParticle(Vector3 position, Quaternion rotation)
+    public void InstantiateHitParticle(Vector3 position)
     {
         Instantiate(_hitParticle, position, _hitParticle.transform.rotation);
     }
