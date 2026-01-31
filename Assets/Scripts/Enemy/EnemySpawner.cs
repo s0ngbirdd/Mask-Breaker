@@ -5,8 +5,8 @@ using Random = UnityEngine.Random;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public int totalEnemiesToSpawn = 100;
-    public int enemiesSpawned = 0;
+    public int totalSouls = 100;
+    public int soulsSpawned = 0;
     [SerializeField] private PlacedObject _placedObjectPrefab;
     [SerializeField] private GridCell[] _spawnPoints;
 
@@ -29,7 +29,7 @@ public class EnemySpawner : MonoBehaviour
                 placedObject.CurrentGridCell = _spawnPoints[i];
                 _spawnPoints[i].CurrentPlacedObject = placedObject;
                 placedObject.GetComponent<SpawnAnimation>().Animate();
-                enemiesSpawned++;
+                soulsSpawned++;
             }
         }
     }

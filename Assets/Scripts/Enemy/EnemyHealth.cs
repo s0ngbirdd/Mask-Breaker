@@ -27,7 +27,9 @@ public class EnemyHealth : MonoBehaviour
         if (_maskHealth <= 0) 
         {
             Destroy(gameObject);
+            GameManager.Instance.globalEventBus.triggerEvent("SoulSaved");
         }
         
     }
 }
+
