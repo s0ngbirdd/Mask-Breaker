@@ -10,6 +10,7 @@ public abstract class EnemyAttacker : MonoBehaviour
 
     public abstract IEnumerator StartAttackCycleCoroutine();
     
+    public abstract void PrepareAttack();
     public abstract void StartAttack();
     public abstract void EndAttack();
 }

@@ -1,17 +1,20 @@
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class EnemyMeleeAttacker : EnemyAttacker
 {
-    [SerializeField] private Renderer _renderer;
+    [SerializeField] private Transform _scaleTarget;
     [SerializeField] private bool _isAttacking;
+    
+    private Tween _scaleTween;
     
     public bool IsAttacking => _isAttacking;
 
-    private void OnValidate()
+    private void OnDisable()
     {
-        _renderer = GetComponent<Renderer>();
+        _scaleTween.Kill();
     }
 
     private void Start()
@@ -24,6 +27,10 @@ public class EnemyMeleeAttacker : EnemyAttacker
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(1f, 5f));
+            
+            PrepareAttack();
+            
+            yield return new WaitForSeconds(1);
 
             StartAttack();
             
@@ -33,15 +40,24 @@ public class EnemyMeleeAttacker : EnemyAttacker
         }
     }
 
+    public override void PrepareAttack()
+    {
+        _scaleTween = _scaleTarget.DOScale(1.15f, 0.2f).SetLoops(-1, LoopType.Yoyo);
+    }
+
     public override void StartAttack()
     {
-        _renderer.material.color = Color.red;
+        // ACTIVATE FIRE MASK SPRITE
+        _scaleTween.Kill();
+        _scaleTarget.localScale = Vector3.one;
+        
         _isAttacking = true;
     }
 
     public override void EndAttack()
     {
-        _renderer.material.color = Color.white;
+        // DEACTIVATE FIRE MASK SPRITE
+        
         _isAttacking = false;
     }
 }
