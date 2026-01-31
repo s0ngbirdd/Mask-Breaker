@@ -24,7 +24,10 @@ public class EnemyHealth : MonoBehaviour
         ParticleSpawner.Instance.InstantiateHitParticle(transform.position);
         
         _maskHealth -= damage;
-        if (_maskhealth <= 0)
+        if (_maskHealth <= 0) 
+        {
             Destroy(gameObject);
+        }
+        
     }
 }
