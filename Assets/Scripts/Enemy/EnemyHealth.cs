@@ -3,13 +3,13 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int _maskHealth = 3;
-    [SerializeField] private EmissionFlicker _emissionFlicker;
+    [SerializeField] private SpriteFlicker _spriteFlicker;
     [SerializeField] private HitScale _hitScale;
     [SerializeField] private EnemyAttacker _enemyAttacker;
 
     private void OnValidate()
     {
-        _emissionFlicker = GetComponent<EmissionFlicker>();
+        _spriteFlicker = GetComponent<SpriteFlicker>();
         _hitScale = GetComponent<HitScale>();
     }
 
@@ -28,7 +28,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void TakeMaskDamage(int damage)
     {
-        _emissionFlicker.Flick(Color.white, 0.15f, 50);
+        _spriteFlicker.FadeFlick(Color.yellow);
         _hitScale.Animate();
         ParticleSpawner.Instance.InstantiateHitParticle(transform.position);
         
