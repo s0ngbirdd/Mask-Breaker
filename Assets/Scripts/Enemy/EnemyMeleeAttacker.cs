@@ -7,6 +7,8 @@ public class EnemyMeleeAttacker : EnemyAttacker
 {
     [SerializeField] private Transform _scaleTarget;
     [SerializeField] private bool _isAttacking;
+    [SerializeField] private SpriteRenderer _baseMask;
+    [SerializeField] private SpriteRenderer _fireMask;
     
     private Tween _scaleTween;
     
@@ -34,7 +36,7 @@ public class EnemyMeleeAttacker : EnemyAttacker
 
             StartAttack();
             
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(2);
             
             EndAttack();
         }
@@ -47,17 +49,18 @@ public class EnemyMeleeAttacker : EnemyAttacker
 
     public override void StartAttack()
     {
-        // ACTIVATE FIRE MASK SPRITE
         _scaleTween.Kill();
         _scaleTarget.localScale = Vector3.one;
         
         _isAttacking = true;
+        _baseMask.gameObject.SetActive(false);
+        _fireMask.gameObject.SetActive(true);
     }
 
     public override void EndAttack()
     {
-        // DEACTIVATE FIRE MASK SPRITE
-        
         _isAttacking = false;
+        _fireMask.gameObject.SetActive(false);
+        _baseMask.gameObject.SetActive(true);
     }
 }
