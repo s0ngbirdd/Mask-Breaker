@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 5900860269483316402}
   - component: {fileID: -3442007829841403676}
   - component: {fileID: 8872332182556999460}
+  - component: {fileID: 5871034153736822222}
   m_Layer: 0
   m_Name: EnemyRange
   m_TagString: Untagged
@@ -339,6 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8831a3dfc72e0614882cc0faecdfa2a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMover
+  _moveSpeedMultiplier: 0.5
   _placedObject: {fileID: 8511560488632700940}
   _moveDirection: {x: 0, y: 0, z: 1}
   _currentGridCell: {fileID: 0}
@@ -403,3 +405,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyRangeAttacker
   _scaleTarget: {fileID: 2880185020367733438}
   _projectilePrefab: {fileID: 8339985745692070415, guid: 52003ef864b51dd4193609414e69b252, type: 3}
+--- !u!114 &5871034153736822222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4066563796154169858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e629c47e960ba9a43819b282431394f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaskCracker
+  _maskSpriteRenderer: {fileID: 8999456549230872231}
+  _maskCrackSprites:
+  - {fileID: 21300000, guid: 7b31f8a09caa0984cac8d308551a34e5, type: 3}
+  - {fileID: 21300000, guid: 027d5724bbbd43849b9793e4c38dc898, type: 3}
+  - {fileID: 21300000, guid: 83c1530f6d7405d4cbb3941f4f2063ac, type: 3}
+  _currentSpriteIndex: 0
