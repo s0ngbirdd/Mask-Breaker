@@ -28,7 +28,7 @@ public class GlobalEventBus : MonoBehaviour
         registeredEvents[eventName].Add(callback);
     }
 
-    public void triggerEvent(string eventName)
+    public void triggerEvent(string eventName, object eventData = null)
     {
         if (registeredEvents.ContainsKey(eventName))
         {

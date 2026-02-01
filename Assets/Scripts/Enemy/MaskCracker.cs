@@ -5,10 +5,10 @@ public class MaskCracker : MonoBehaviour
     [SerializeField] private SpriteRenderer _maskSpriteRenderer;
     [SerializeField] private Sprite[] _maskCrackSprites;
     [SerializeField] private int _currentSpriteIndex = 0;
-
+    [SerializeField] private EnemyAttacker _enemyAttacker;
     void Start()
     {
-        GameManager.Instance.globalEventBus.registerEvent("PlayerDamaged", ChangeCracking);
+        GameManager.Instance.globalEventBus.registerEvent($"MaskDamaged:{_enemyAttacker.id}", ChangeCracking);
     }
 
     private void ChangeCracking()

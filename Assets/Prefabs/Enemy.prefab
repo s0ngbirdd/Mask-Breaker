@@ -532,6 +532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ccdc52e0206e704c9f400995c2367dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMeleeAttacker
+  id: 2ad1fa5e-f34a-4001-908a-9bdfc6a013a6
   _scaleTarget: {fileID: 200349500466170406}
   _isAttacking: 0
   _baseMask: {fileID: 3297096583578451336}
@@ -554,6 +555,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31d1ebf5fdb9a8440b546ac20469072d, type: 3}
   - {fileID: 21300000, guid: 90af5e6545ee00043875812dcd8f5aa2, type: 3}
   _currentSpriteIndex: 0
+  _enemyAttacker: {fileID: 2914802235174273398}
 --- !u!1 &4515447435128068214
 GameObject:
   m_ObjectHideFlags: 0

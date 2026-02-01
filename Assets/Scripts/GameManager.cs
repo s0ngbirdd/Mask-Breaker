@@ -6,6 +6,7 @@ using System.Collections;
 using System.Runtime.CompilerServices;
 public enum GameState
 {
+    StartMenu,
     Playing,
     Won,
     GameOver
@@ -18,7 +19,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameEndUIController _gameEndUIController;
 
     public GlobalEventBus globalEventBus;
-    GameState currentGameState = GameState.Playing;
+    public GameState currentGameState = GameState.StartMenu;
 
     public int soulsSaved = 0;
     public int health = 3;
@@ -74,6 +75,14 @@ public class GameManager : MonoBehaviour
             Debug.Log("Game Over!");
             _gameEndUIController.setGameEndUIState(GameEndUIController.State.GameOver);
         }
+    }
+
+    public void StartGame()
+    {
+        currentGameState = GameState.Playing;
+        soulsSaved = 0;
+        health = 3;
+        enemySpawner.SpawnEnemyWave();
     }
     
     public void RestartGame()

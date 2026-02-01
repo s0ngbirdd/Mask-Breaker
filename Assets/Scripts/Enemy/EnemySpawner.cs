@@ -9,11 +9,6 @@ public class EnemySpawner : MonoBehaviour
     public int soulsSpawned = 0;
     [SerializeField] private PlacedObject[] _placedObjectPrefabs;
     [SerializeField] private GridCell[] _spawnPoints;
-
-    void Start()
-    {
-        SpawnEnemyWave();
-    }
     public void SpawnEnemyWave()
     {
         StartCoroutine(SpawnEnemyWaveCoroutine());
@@ -21,7 +16,7 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnEnemyWaveCoroutine()
     {
-        while(GameManager.Instance.soulsSaved < totalSouls)
+        while(GameManager.Instance.soulsSaved < totalSouls && GameManager.Instance.currentGameState == GameState.Playing)
         {
             yield return new WaitForSeconds(3f);
                 for (int i = 0; i < _spawnPoints.Length; i++)
