@@ -48,9 +48,9 @@ public class CursorController : MonoBehaviour
         else
             Cursor.SetCursor(_leftSlapCursor, hotspot, CursorMode.Auto);*/
         
-        if (Input.mousePosition.x - _lastCursorPosition.x > 5)
+        if (Input.mousePosition.x - _lastCursorPosition.x > 10)
             Cursor.SetCursor(_rightSlapCursor, hotspot, CursorMode.Auto);
-        else if (Input.mousePosition.x - _lastCursorPosition.x < -5)
+        else if (Input.mousePosition.x - _lastCursorPosition.x < -10)
             Cursor.SetCursor(_leftSlapCursor, hotspot, CursorMode.Auto);
         else
             Cursor.SetCursor(_forwardCursor, hotspot, CursorMode.Auto);
