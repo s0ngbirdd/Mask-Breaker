@@ -36,7 +36,7 @@ public class EnemyMeleeAttacker : EnemyAttacker
 
             StartAttack();
             
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
             
             EndAttack();
         }

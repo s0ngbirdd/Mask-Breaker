@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8831a3dfc72e0614882cc0faecdfa2a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMover
-  _moveSpeedMultiplier: 0.5
+  _moveSpeedMultiplier: 1
   _placedObject: {fileID: 8511560488632700940}
   _moveDirection: {x: 0, y: 0, z: 1}
   _currentGridCell: {fileID: 0}

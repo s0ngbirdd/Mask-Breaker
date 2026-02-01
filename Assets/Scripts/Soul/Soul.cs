@@ -13,6 +13,6 @@ public class Soul : MonoBehaviour
 
     private void Start()
     {
-        transform.DOMove(Vector3.up * _maxAltitude, _moveSpeed).SetSpeedBased().OnComplete(() => Destroy(gameObject));
+        transform.DOLocalMoveY(_maxAltitude, _moveSpeed).SetSpeedBased().OnComplete(() => Destroy(gameObject));
     }
 }
