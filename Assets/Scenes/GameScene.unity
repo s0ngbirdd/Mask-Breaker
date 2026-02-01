@@ -3274,6 +3274,7 @@ MonoBehaviour:
   _leftSlapCursor: {fileID: 2800000, guid: 663b19eaf73465d4893871e6fff8013c, type: 3}
   _rightSlapCursor: {fileID: 2800000, guid: 41eb5750014f4a341a2c20bd5fd5769e, type: 3}
   _damagedCursor: {fileID: 2800000, guid: 51a36ccc53af560429f5840ea482e91c, type: 3}
+  _forwardCursor: {fileID: 2800000, guid: 8ed8e926e552453408e966ddcec060f2, type: 3}
   _defaultCursorWaitTime: 0.5
   _lastCursorPosition: {x: 0, y: 0}
 --- !u!4 &436312946

@@ -9,6 +9,7 @@ public class CursorController : MonoBehaviour
     [SerializeField] private Texture2D _leftSlapCursor;
     [SerializeField] private Texture2D _rightSlapCursor;
     [SerializeField] private Texture2D _damagedCursor;
+    [SerializeField] private Texture2D _forwardCursor;
     [SerializeField] private float _defaultCursorWaitTime = 0.5f;
     [SerializeField] private Vector2 _lastCursorPosition;
 
@@ -42,10 +43,17 @@ public class CursorController : MonoBehaviour
     {
         Vector2 hotspot = new Vector2(64, 64);
         
-        if (Input.mousePosition.x - _lastCursorPosition.x > 0)
+        /*if (Input.mousePosition.x - _lastCursorPosition.x > 0)
             Cursor.SetCursor(_rightSlapCursor, hotspot, CursorMode.Auto);
         else
+            Cursor.SetCursor(_leftSlapCursor, hotspot, CursorMode.Auto);*/
+        
+        if (Input.mousePosition.x - _lastCursorPosition.x > 5)
+            Cursor.SetCursor(_rightSlapCursor, hotspot, CursorMode.Auto);
+        else if (Input.mousePosition.x - _lastCursorPosition.x < -5)
             Cursor.SetCursor(_leftSlapCursor, hotspot, CursorMode.Auto);
+        else
+            Cursor.SetCursor(_forwardCursor, hotspot, CursorMode.Auto);
         
         if (_setDefaultCursorCoroutine != null)
             StopCoroutine(_setDefaultCursorCoroutine);
