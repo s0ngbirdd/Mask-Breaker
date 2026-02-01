@@ -404,6 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d8eb8cf916a50144abb3698448a1605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyRangeAttacker
+  id: a5fdc63d-caad-4658-9373-312a3d98dafd
   _scaleTarget: {fileID: 2880185020367733438}
   _projectilePrefab: {fileID: 8339985745692070415, guid: 52003ef864b51dd4193609414e69b252, type: 3}
 --- !u!114 &5871034153736822222
@@ -424,3 +425,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 027d5724bbbd43849b9793e4c38dc898, type: 3}
   - {fileID: 21300000, guid: 83c1530f6d7405d4cbb3941f4f2063ac, type: 3}
   _currentSpriteIndex: 0
+  _enemyAttacker: {fileID: 8872332182556999460}
