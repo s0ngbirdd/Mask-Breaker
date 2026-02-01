@@ -6,6 +6,6 @@
             <ui:Label text="START GAME"/>
         </ui:Button>
         <ui:Image source="project://database/Assets/UI/Textures/HowToPlay2.png?fileID=2800000&amp;guid=1a7eecb5125da44baa3ab411b7d29bb3&amp;type=3#HowToPlay2" scale-mode="ScaleToFit" style="width: 40%; height: 40%; top: 20px;"/>
-        <ui:Image name="Image" source="project://database/Assets/UI/Textures/HowToPlay.png?fileID=2800000&amp;guid=470d0a5cdc0ce4a9f96c1532cb4ed576&amp;type=3#HowToPlay" style="width: 35%; height: 35%; top: -10px;"/>
+        <ui:Image name="Image" source="project://database/Assets/UI/Textures/HowToPlay.png?fileID=2800000&amp;guid=470d0a5cdc0ce4a9f96c1532cb4ed576&amp;type=3#HowToPlay" scale-mode="StretchToFill" style="width: 35%; height: 35%; top: -10px;"/>
     </ui:VisualElement>
 </ui:UXML>
