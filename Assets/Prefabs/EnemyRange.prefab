@@ -365,6 +365,7 @@ MonoBehaviour:
   _hitScale: {fileID: -3442007829841403676}
   _enemyAttacker: {fileID: 8872332182556999460}
   _soulPrefab: {fileID: 1723673363036962741, guid: b7c69b800038b7348926a450beddf91e, type: 3}
+  _breakingMaskPrefab: {fileID: 6171738812340851843, guid: 47f455ea46c510a40a9cf00ca4d4045a, type: 3}
 --- !u!114 &5900860269483316402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,7 +405,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d8eb8cf916a50144abb3698448a1605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyRangeAttacker
-  id: a5fdc63d-caad-4658-9373-312a3d98dafd
   _scaleTarget: {fileID: 2880185020367733438}
   _projectilePrefab: {fileID: 8339985745692070415, guid: 52003ef864b51dd4193609414e69b252, type: 3}
 --- !u!114 &5871034153736822222

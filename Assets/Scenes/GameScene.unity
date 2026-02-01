@@ -13824,7 +13824,7 @@ MonoBehaviour:
   _gameLoopName: GameLoop
   _sounds:
   - name: GameLoop
-    clip: {fileID: 8300000, guid: bd1b08163b2cb314d96898ae6ee7b96c, type: 3}
+    clip: {fileID: 8300000, guid: 7b38e6dc2bc0c11459c5e826cca9ee09, type: 3}
     playOnAwake: 1
     loop: 1
     volume: 1
