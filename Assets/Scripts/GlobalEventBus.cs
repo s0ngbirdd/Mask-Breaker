@@ -38,4 +38,14 @@ public class GlobalEventBus : MonoBehaviour
             }
         }
     }
+
+    void OnSceneLoaded()
+    {
+        ClearAllEvents();
+    }
+
+    public void ClearAllEvents()
+    {
+        registeredEvents.Clear();
+    }
 }

@@ -52,9 +52,10 @@ public class GameManager : MonoBehaviour
 
     public void OnPlayerDamaged()
     {
+        if(currentGameState != GameState.Playing) return;
         health--;
         _gameHUDController.LoseHeart();
-        Debug.Log($"Player Damaged! Health remaining: {health}");
+        globalEventBus.triggerEvent("PlayerDamaged");
         if(health <= 0)
         {
             setGameState(GameState.GameOver);
@@ -80,11 +81,12 @@ public class GameManager : MonoBehaviour
         // Destroy self before reload
         Instance = null;
         Destroy(gameObject);
-        
+        globalEventBus.ClearAllEvents();
         Time.timeScale = 1f;
         UnityEngine.SceneManagement.SceneManager.LoadScene(
             UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex
         );
+
     }
 
     public double ProgressPercentage

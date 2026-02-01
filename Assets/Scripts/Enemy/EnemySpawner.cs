@@ -21,7 +21,7 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnEnemyWaveCoroutine()
     {
-        while(soulsSpawned < totalSouls)
+        while(GameManager.Instance.soulsSaved < totalSouls)
         {
             yield return new WaitForSeconds(3f);
                 for (int i = 0; i < _spawnPoints.Length; i++)
