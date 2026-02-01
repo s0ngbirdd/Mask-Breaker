@@ -91,10 +91,14 @@ public class GameHUDController : MonoBehaviour
     public void SetProgress(float percent)
     {
         currentProgress = Mathf.Clamp(percent, 0f, 100f);
-        
+    
         if (progressFill != null)
         {
-            progressFill.style.height = new Length(currentProgress, LengthUnit.Percent);
+            float minHeight = 0f;
+            float maxHeight = 85f; 
+            
+            float fillHeight = Mathf.Lerp(minHeight, maxHeight, currentProgress / 100f);
+            progressFill.style.height = new Length(fillHeight, LengthUnit.Percent);
         }
     }
     
