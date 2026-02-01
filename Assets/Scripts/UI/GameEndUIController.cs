@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+using System.Collections;
 
 public class GameEndUIController : MonoBehaviour
 {
@@ -10,9 +11,33 @@ public class GameEndUIController : MonoBehaviour
     }
     [Header("UI Document")]
     [SerializeField] private UIDocument uiDocument;
-
     void OnEnable()
     {
+         StartCoroutine(InitializeUI());
+    }
+
+    IEnumerator InitializeUI()
+    {
+        yield return null;
+        var root = uiDocument.rootVisualElement;
+        root.pickingMode = PickingMode.Ignore;
+        
+        var playAgainButton = root.Q<Button>("play-again-button");
+        playAgainButton.clicked += () => 
+        {
+            OnPlayAgainButtonClicked();
+        };
+
+        var restartButton = root.Q<Button>("restart-game-button");
+        restartButton.clicked += () => 
+        {
+            OnPlayAgainButtonClicked();
+        };
+    }
+
+    public void OnPlayAgainButtonClicked()
+    {
+        GameManager.Instance.RestartGame();
     }
     
 
@@ -22,7 +47,6 @@ public class GameEndUIController : MonoBehaviour
         
         var gameOverScreen = root.Q<VisualElement>("game-over-screen");
         var youWonScreen = root.Q<VisualElement>("game-won-screen");
-        
         switch(state)
         {
             case State.Won:

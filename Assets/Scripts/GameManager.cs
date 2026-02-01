@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using System.Collections.Generic;
 using System.Collections;
+using System.Runtime.CompilerServices;
 public enum GameState
 {
     Playing,
@@ -23,15 +24,13 @@ public class GameManager : MonoBehaviour
     public int health = 3;
     void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (Instance != null)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
             return;
         }
-
         Instance = this;
-
-        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(gameObject);
     }
     
     void Start()
@@ -74,6 +73,18 @@ public class GameManager : MonoBehaviour
             Debug.Log("Game Over!");
             _gameEndUIController.setGameEndUIState(GameEndUIController.State.GameOver);
         }
+    }
+    
+    public void RestartGame()
+    {
+        // Destroy self before reload
+        Instance = null;
+        Destroy(gameObject);
+        
+        Time.timeScale = 1f;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex
+        );
     }
 
     public double ProgressPercentage

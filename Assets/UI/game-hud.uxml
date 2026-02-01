@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/game-hud.uss?fileID=7433441132597879392&amp;guid=f05c80f7eaab942e4a339c6e7cbf4485&amp;type=3#game-hud"/>
-    <ui:VisualElement name="root" class="root">
+    <ui:VisualElement name="root" class="root" picking-mode="Ignore">
         <ui:VisualElement name="top-bar" class="top-bar">
             <ui:VisualElement name="hearts-container" class="hearts-container">
                 <ui:VisualElement name="heart-1" class="heart heart-filled"/>

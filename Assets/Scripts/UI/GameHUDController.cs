@@ -23,7 +23,7 @@ public class GameHUDController : MonoBehaviour
     // State
     private int currentHearts;
     private float currentProgress;
-    
+        
     void OnEnable()
     {
         // Wait for UI to be ready
@@ -94,7 +94,7 @@ public class GameHUDController : MonoBehaviour
     
         if (progressFill != null)
         {
-            float minHeight = 0f;
+            float minHeight = 8f;
             float maxHeight = 85f; 
             
             float fillHeight = Mathf.Lerp(minHeight, maxHeight, currentProgress / 100f);
@@ -132,5 +132,12 @@ public class GameHUDController : MonoBehaviour
         heart.AddToClassList("heart-damaged");
         yield return new WaitForSeconds(0.1f);
         heart.RemoveFromClassList("heart-damaged");
+    }
+
+    void OnDisable()
+    {
+        // Clean up UI references
+        progressFill = null;
+        hearts.Clear();
     }
 }

@@ -5,11 +5,15 @@ using Random = UnityEngine.Random;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public int totalSouls = 100;
+    public int totalSouls = 20;
     public int soulsSpawned = 0;
     [SerializeField] private PlacedObject[] _placedObjectPrefabs;
     [SerializeField] private GridCell[] _spawnPoints;
 
+    void Start()
+    {
+        SpawnEnemyWave();
+    }
     public void SpawnEnemyWave()
     {
         StartCoroutine(SpawnEnemyWaveCoroutine());
@@ -17,22 +21,26 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnEnemyWaveCoroutine()
     {
-        for (int i = 0; i < _spawnPoints.Length; i++)
+        while(soulsSpawned < totalSouls)
         {
-            int isSpawned = Random.Range(0, 2);
-
-            if (isSpawned == 1)
-            {
-                yield return new WaitForSeconds(i * 0.1f);
-                
-                PlacedObject placedObject = Instantiate(_placedObjectPrefabs[Random.Range(0, _placedObjectPrefabs.Length)],
-                    _spawnPoints[i].transform.position + Vector3.up, Quaternion.identity);
-                placedObject.CurrentGridCell = _spawnPoints[i];
-                _spawnPoints[i].CurrentPlacedObject = placedObject;
-                placedObject.GetComponent<SpawnAnimation>().Animate();
-                soulsSpawned++;
-            }
+            yield return new WaitForSeconds(3f);
+                for (int i = 0; i < _spawnPoints.Length; i++)
+                {
+                    int isSpawned = Random.Range(0, 2);
+                    if (isSpawned == 1)
+                    {
+                        yield return new WaitForSeconds(i * 0.1f);
+                        
+                        PlacedObject placedObject = Instantiate(_placedObjectPrefabs[Random.Range(0, _placedObjectPrefabs.Length)],
+                            _spawnPoints[i].transform.position + Vector3.up, Quaternion.identity);
+                        placedObject.CurrentGridCell = _spawnPoints[i];
+                        _spawnPoints[i].CurrentPlacedObject = placedObject;
+                        placedObject.GetComponent<SpawnAnimation>().Animate();
+                        soulsSpawned++;
+                    }
+                }
         }
+   
     }
 }
 
