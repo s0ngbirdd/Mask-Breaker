@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using UnityEngine;
 
 public class AudioController : MonoBehaviour
@@ -11,6 +10,8 @@ public class AudioController : MonoBehaviour
     [SerializeField] private bool _isSoundEnabled = true;
     [SerializeField] private string _gameLoopName = "GameLoop";
     [SerializeField] private Sound[] _sounds;
+
+    private int _slapCount;
     
     public bool IsSoundEnabled => _isSoundEnabled;
     public bool IsGameLoopEnabled => _isGameLoopEnabled;
@@ -96,6 +97,36 @@ public class AudioController : MonoBehaviour
     {
         Sound snd = Array.Find(_sounds, sound => sound.name == name);
         return snd.source;
+    }
+    
+    public void PlaySlapOneShot()
+    {
+        if (!_isAudioEnabled) return;
+        
+        Sound snd;// = Array.Find(_sounds, sound => sound.name == name);
+        
+        /*if (snd == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }*/
+        
+        if (_slapCount / 2f == 0)
+            snd = Array.Find(_sounds, sound => sound.name == "Slap1");
+        else
+            snd = Array.Find(_sounds, sound => sound.name == "Slap2");
+        
+        snd.currentPlayTime = Time.time;
+        
+        if (snd.currentPlayTime - snd.lastPlayTime >= 0.001f)
+        {
+            snd.lastPlayTime = snd.currentPlayTime;
+            snd.source.PlayOneShot(snd.clip);
+        }
+        
+        //snd.source.PlayOneShot(snd.clip);
+        
+        _slapCount++;
     }
     
     /*public void EnableDisableGameLoopVolume()

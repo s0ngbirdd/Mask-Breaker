@@ -5,7 +5,12 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 2;
     [SerializeField] private Transform _targetRotation;
-    
+
+    private void OnDisable()
+    {
+        transform.DOKill();
+    }
+
     private void Start()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

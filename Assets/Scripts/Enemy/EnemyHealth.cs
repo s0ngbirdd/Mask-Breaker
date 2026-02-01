@@ -24,7 +24,8 @@ public class EnemyHealth : MonoBehaviour
                 GameManager.Instance.OnPlayerDamaged();
             } 
         }
-        
+
+        AudioController.Instance.PlaySlapOneShot();
         CursorController.Instance.SetSlapCursor();
         TakeMaskDamage(1);
     }

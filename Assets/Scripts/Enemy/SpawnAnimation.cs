@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 
@@ -14,6 +15,11 @@ public class SpawnAnimation : MonoBehaviour
     private void OnValidate()
     {
         _enemyMovement = GetComponent<EnemyMovement>();
+    }
+
+    private void OnDisable()
+    {
+        _animationSequence.Kill();
     }
 
     public void Animate()
