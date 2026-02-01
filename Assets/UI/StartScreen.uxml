@@ -3,7 +3,7 @@
     <ui:VisualElement name="start-screen-root" class="start-screen-root">
         <ui:Image source="Textures/MaskBreakerTitle.png" class="mask-breaker-title" style="aspect-ratio: 1.777778; width: 50%;"/>
         <ui:Button name="start-game-button" class="start-game-button">
-            <ui:Label text="Start Game"/>
+            <ui:Label text="START GAME"/>
         </ui:Button>
     </ui:VisualElement>
 </ui:UXML>
