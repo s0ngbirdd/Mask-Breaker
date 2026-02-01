@@ -37,7 +37,7 @@ public class EnemyHealth : MonoBehaviour
         ParticleSpawner.Instance.InstantiateHitParticle(transform.position);
         
         _maskHealth -= damage;
-        GameManager.Instance.globalEventBus.triggerEvent($"MaskDamaged:{_enemyAttacker.id}");
+        GameManager.Instance.globalEventBus.triggerEvent($"MaskDamaged:{_enemyAttacker.GetEntityId()}");
         if (_maskHealth <= 0) 
         {
             Instantiate(_soulPrefab, transform.position, Quaternion.identity);

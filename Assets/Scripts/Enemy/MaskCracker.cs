@@ -8,7 +8,7 @@ public class MaskCracker : MonoBehaviour
     [SerializeField] private EnemyAttacker _enemyAttacker;
     void Start()
     {
-        GameManager.Instance.globalEventBus.registerEvent($"MaskDamaged:{_enemyAttacker.id}", ChangeCracking);
+        GameManager.Instance.globalEventBus.registerEvent($"MaskDamaged:{_enemyAttacker.GetEntityId()}", ChangeCracking);
     }
 
     private void ChangeCracking()
