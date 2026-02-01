@@ -6,7 +6,6 @@
     padding: 40px;
     border-radius: 10px;
     text-align: center;
-    margin-top: -10%;
 }
 
 .game-end-title {
