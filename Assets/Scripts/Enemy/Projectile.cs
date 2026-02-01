@@ -21,6 +21,7 @@ public class Projectile : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        CursorController.Instance.SetDamagedCursor();
         GameManager.Instance.OnPlayerDamaged();
         Destroy(this.gameObject);
     }

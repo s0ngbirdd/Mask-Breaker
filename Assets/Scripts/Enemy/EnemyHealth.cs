@@ -20,10 +20,12 @@ public class EnemyHealth : MonoBehaviour
         {
             if (enemyMeleeAttacker.IsAttacking)
             {
+                CursorController.Instance.SetDamagedCursor();
                 GameManager.Instance.OnPlayerDamaged();
             } 
         }
         
+        CursorController.Instance.SetSlapCursor();
         TakeMaskDamage(1);
     }
 

@@ -1144,6 +1144,55 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &436312944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 436312946}
+  - component: {fileID: 436312945}
+  m_Layer: 0
+  m_Name: CursorController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &436312945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436312944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78bbb6f737230fe4a96d6ca957890919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorController
+  _defaultCursor: {fileID: 2800000, guid: a54a32cc84eb7fc409178260ea49c625, type: 3}
+  _leftSlapCursor: {fileID: 2800000, guid: 663b19eaf73465d4893871e6fff8013c, type: 3}
+  _rightSlapCursor: {fileID: 2800000, guid: 41eb5750014f4a341a2c20bd5fd5769e, type: 3}
+  _damagedCursor: {fileID: 2800000, guid: 51a36ccc53af560429f5840ea482e91c, type: 3}
+  _defaultCursorWaitTime: 0.5
+--- !u!4 &436312946
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436312944}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &453075139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3540,6 +3589,7 @@ SceneRoots:
   - {fileID: 1073549248}
   - {fileID: 565850958}
   - {fileID: 1090877275}
+  - {fileID: 436312946}
   - {fileID: 132728454}
   - {fileID: 1036437690}
   - {fileID: 63710940}
