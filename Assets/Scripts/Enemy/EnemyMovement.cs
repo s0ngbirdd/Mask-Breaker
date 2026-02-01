@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    [SerializeField] private float _moveSpeedMultiplier = 0.5f;
     [SerializeField] private PlacedObject _placedObject;
     [SerializeField] private Vector3 _moveDirection;
     [SerializeField] private GridCell _currentGridCell;
@@ -32,7 +33,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void Move()
     {
-        _distanceTime += Time.deltaTime;
+        _distanceTime += Time.deltaTime * _moveSpeedMultiplier;
             
         SetPosition();
             

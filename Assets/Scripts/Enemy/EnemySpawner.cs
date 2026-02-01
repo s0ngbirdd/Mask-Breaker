@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
 {
     public int totalSouls = 100;
     public int soulsSpawned = 0;
-    [SerializeField] private PlacedObject _placedObjectPrefab;
+    [SerializeField] private PlacedObject[] _placedObjectPrefabs;
     [SerializeField] private GridCell[] _spawnPoints;
 
     public void SpawnEnemyWave()
@@ -25,7 +25,8 @@ public class EnemySpawner : MonoBehaviour
             {
                 yield return new WaitForSeconds(i * 0.1f);
                 
-                PlacedObject placedObject = Instantiate(_placedObjectPrefab, _spawnPoints[i].transform.position + Vector3.up, Quaternion.identity);
+                PlacedObject placedObject = Instantiate(_placedObjectPrefabs[Random.Range(0, _placedObjectPrefabs.Length)],
+                    _spawnPoints[i].transform.position + Vector3.up, Quaternion.identity);
                 placedObject.CurrentGridCell = _spawnPoints[i];
                 _spawnPoints[i].CurrentPlacedObject = placedObject;
                 placedObject.GetComponent<SpawnAnimation>().Animate();

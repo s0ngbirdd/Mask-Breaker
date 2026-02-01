@@ -1481,7 +1481,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
   totalSouls: 3
   soulsSpawned: 0
-  _placedObjectPrefab: {fileID: 8511560488632700940, guid: c2fae7854e7bd834281f771587c04fd3, type: 3}
+  _placedObjectPrefabs:
+  - {fileID: 8511560488632700940, guid: c2fae7854e7bd834281f771587c04fd3, type: 3}
+  - {fileID: 8511560488632700940, guid: b5c5c5612d55f284b994f22775e5de44, type: 3}
   _spawnPoints:
   - {fileID: 1680463580}
   - {fileID: 1626244340}
