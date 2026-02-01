@@ -364,6 +364,7 @@ MonoBehaviour:
   _spriteFlicker: {fileID: 5900860269483316402}
   _hitScale: {fileID: -3442007829841403676}
   _enemyAttacker: {fileID: 8872332182556999460}
+  _soulPrefab: {fileID: 1723673363036962741, guid: b7c69b800038b7348926a450beddf91e, type: 3}
 --- !u!114 &5900860269483316402
 MonoBehaviour:
   m_ObjectHideFlags: 0

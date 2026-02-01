@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private SpriteFlicker _spriteFlicker;
     [SerializeField] private HitScale _hitScale;
     [SerializeField] private EnemyAttacker _enemyAttacker;
+    [SerializeField] private Soul _soulPrefab;
 
     private void OnValidate()
     {
@@ -35,6 +36,8 @@ public class EnemyHealth : MonoBehaviour
         _maskHealth -= damage;
         if (_maskHealth <= 0) 
         {
+            Instantiate(_soulPrefab, transform.position, Quaternion.identity);
+            
             Destroy(gameObject);
             GameManager.Instance.globalEventBus.triggerEvent("SoulSaved");
         }
