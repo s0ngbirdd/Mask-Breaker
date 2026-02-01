@@ -16,6 +16,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        if(GameManager.Instance.currentGameState != GameState.Playing) return;
         if (_enemyAttacker is EnemyMeleeAttacker enemyMeleeAttacker)
         {
             if (enemyMeleeAttacker.IsAttacking)

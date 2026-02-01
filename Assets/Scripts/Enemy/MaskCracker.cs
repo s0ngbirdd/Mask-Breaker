@@ -25,7 +25,11 @@ public class MaskCracker : MonoBehaviour
             {
                 Debug.LogError($"MaskCracker: Failed to change sprite at index {_currentSpriteIndex}. Exception: {e.Message}");
             }
-        }
-            
+        } 
+    }
+
+    void OnDestroy()
+    {
+        GameManager.Instance.globalEventBus.unregisterEvent($"MaskDamaged:{_enemyAttacker.GetEntityId()}", ChangeCracking);
     }
 }

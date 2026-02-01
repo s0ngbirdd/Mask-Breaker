@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour
         } else if(currentGameState == GameState.GameOver)
         {
             Debug.Log("Game Over!");
+            _gameHUDController.HideHUD();
             _gameEndUIController.setGameEndUIState(GameEndUIController.State.GameOver);
         }
     }
@@ -83,6 +84,7 @@ public class GameManager : MonoBehaviour
         soulsSaved = 0;
         health = 3;
         enemySpawner.SpawnEnemyWave();
+        _gameHUDController.ShowHUD();
     }
     
     public void RestartGame()

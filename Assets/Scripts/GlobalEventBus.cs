@@ -28,6 +28,18 @@ public class GlobalEventBus : MonoBehaviour
         registeredEvents[eventName].Add(callback);
     }
 
+    public void unregisterEvent(string eventName, Callback callback)
+    {
+        if (registeredEvents.ContainsKey(eventName))
+        {
+            registeredEvents[eventName].Remove(callback);
+            if (registeredEvents[eventName].Count == 0)
+            {
+                registeredEvents.Remove(eventName);
+            }
+        }
+    }
+
     public void triggerEvent(string eventName, object eventData = null)
     {
         if (registeredEvents.ContainsKey(eventName))

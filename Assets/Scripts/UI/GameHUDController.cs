@@ -23,7 +23,6 @@ public class GameHUDController : MonoBehaviour
     // State
     private int currentHearts;
     private float currentProgress;
-        
     void OnEnable()
     {
         // Wait for UI to be ready
@@ -36,7 +35,7 @@ public class GameHUDController : MonoBehaviour
         yield return null;
         
         var root = uiDocument.rootVisualElement;
-        
+        HideHUD();
         // Cache heart elements
         hearts.Clear();
         for (int i = 1; i <= maxHearts; i++)
@@ -57,6 +56,18 @@ public class GameHUDController : MonoBehaviour
         SetProgress(0f);
         
         Debug.Log($"HUD Initialized: {hearts.Count} hearts, progress bar found: {progressFill != null}");
+    }
+
+    public void ShowHUD()
+    {
+        var root = uiDocument.rootVisualElement;
+        root.style.display = DisplayStyle.Flex;
+    }
+
+    public void HideHUD()
+    {
+        var root = uiDocument.rootVisualElement;
+        root.style.display = DisplayStyle.None;
     }
     
     public void SetHearts(int filledHearts)
