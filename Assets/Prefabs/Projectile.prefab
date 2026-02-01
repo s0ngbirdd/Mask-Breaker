@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c1fcd3fbc205aa418d18914f89c07e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
-  _moveSpeed: 1
+  _moveSpeed: 2
   _targetRotation: {fileID: 8670505734860807400}
 --- !u!1 &8234455113045532683
 GameObject:
