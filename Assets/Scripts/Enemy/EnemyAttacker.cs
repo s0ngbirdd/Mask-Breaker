@@ -3,7 +3,6 @@ using UnityEngine;
 
 public abstract class EnemyAttacker : MonoBehaviour
 {
-    public string id = System.Guid.NewGuid().ToString();
     private void Start()
     {
         StartCoroutine(StartAttackCycleCoroutine());
