@@ -48,7 +48,6 @@ public class EnemyMovement : MonoBehaviour
             {
                 Destroy(this.gameObject);
                 GameManager.Instance.globalEventBus.triggerEvent("EnemyReachedEnd");
-                Debug.Log("Enemy reached the end and is destroyed.");
                 return;
             }
             ;
