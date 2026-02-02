@@ -5,10 +5,16 @@ public class MaskCracker : MonoBehaviour
     [SerializeField] private SpriteRenderer _maskSpriteRenderer;
     [SerializeField] private Sprite[] _maskCrackSprites;
     [SerializeField] private int _currentSpriteIndex = 0;
-    [SerializeField] private EnemyAttacker _enemyAttacker;
+
+    private EnemyHealth _health;
+
+    void Awake()
+    {
+        _health = GetComponent<EnemyHealth>();
+    }
     void Start()
     {
-        GameManager.Instance.globalEventBus.registerEvent($"MaskDamaged:{_enemyAttacker.GetEntityId()}", ChangeCracking);
+        _health.OnMaskDamaged += ChangeCracking;
     }
 
     private void ChangeCracking()
@@ -26,10 +32,5 @@ public class MaskCracker : MonoBehaviour
                 Debug.LogError($"MaskCracker: Failed to change sprite at index {_currentSpriteIndex}. Exception: {e.Message}");
             }
         } 
-    }
-
-    void OnDestroy()
-    {
-        GameManager.Instance.globalEventBus.unregisterEvent($"MaskDamaged:{_enemyAttacker.GetEntityId()}", ChangeCracking);
     }
 }

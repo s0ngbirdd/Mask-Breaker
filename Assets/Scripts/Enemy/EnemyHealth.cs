@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
@@ -9,6 +10,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private Soul _soulPrefab;
     [SerializeField] private BreakingMask _breakingMaskPrefab;
 
+    public event Action OnMaskDamaged;
     private void OnValidate()
     {
         _spriteFlicker = GetComponent<SpriteFlicker>();
@@ -39,7 +41,7 @@ public class EnemyHealth : MonoBehaviour
         ParticleSpawner.Instance.InstantiateHitParticle(transform.position);
         
         _maskHealth -= damage;
-        GameManager.Instance.globalEventBus.triggerEvent($"MaskDamaged:{_enemyAttacker.GetEntityId()}");
+        OnMaskDamaged?.Invoke();
         if (_maskHealth <= 0) 
         {
             Instantiate(_soulPrefab, transform.position, Quaternion.identity);
